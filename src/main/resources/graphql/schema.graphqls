@@ -1,0 +1,33 @@
+type Mutation {
+	adicionaCategoria(categoria: CategoriaInput): Categoria
+	adicionaProduto(produto: ProdutoInput): Produto
+}
+
+type Query {
+	categoriaPorId(id: ID): Categoria
+	listarProdutos: [Produto]
+}
+
+input CategoriaInput {
+	descricao: String!
+}
+
+input ProdutoInput{
+	descricao: String!
+	valor: Float!
+	categoriaId: ID!
+}
+
+type Categoria {
+	descricao: String
+	id: ID!
+}
+
+type Produto {
+	id: ID
+	descricao: String
+	valor: Float
+	categoria: Categoria
+}
+
+
