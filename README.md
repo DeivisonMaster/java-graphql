@@ -2,6 +2,7 @@
 <p>Api desenvolvida com Spring boot</p>
 
 GraphQL especificação desenvolvida pelo Facebook para tornar mais performático o acesso a dados de multiplos endpoints.
+<br/>
 Como vantagens tem-se o menor consumo de rede ao trafegar dados via HTTP.
 Evita a criação de rotas adicionais no REST
 
@@ -17,6 +18,9 @@ adicionaCategoria:
 <br/>
 
 Mutation: adicionaCategoria / Query: listarProdutos:
+<br/>
+No exemplo abaixo é possivel notar que o client do recurso via query string, obtem apenas o que lhe é necessário via requisição, sem a necessidade
+de se ter varios dados do objeto de retorno.
 
 ![Screenshot](docs/adiciona-lista-produtos.jpg)
 
