@@ -1,6 +1,6 @@
 type Mutation {
 	adicionaCategoria(categoria: CategoriaInput): Categoria
-	adicionaProdutoXZ(produto: ProdutoInput): Produto
+	adicionaProduto(produto: ProdutoInput): Produto
 }
 
 type Query {
