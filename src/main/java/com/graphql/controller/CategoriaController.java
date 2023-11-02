@@ -15,16 +15,16 @@ import org.springframework.stereotype.Controller;
 public class CategoriaController {
 	
 	@Autowired
-	private CategoriaRepositorio repositorio;
+	private CategoriaRepositorio categoriaRepositorio;
 	
 	@SchemaMapping(typeName = "Mutation", field = "adicionaCategoria")
 	Categoria adicionaCategoria(@Argument CategoriaInput categoria){
-		return this.repositorio.save(new Categoria(categoria.descricao));
+		return this.categoriaRepositorio.save(new Categoria(categoria.descricao));
 	}
 	
 	@SchemaMapping(typeName = "Query", field = "categoriaPorId")
 	Optional<Categoria> categoriaPorId(@Argument Long id) {
-		return this.repositorio.findById(id);
+		return this.categoriaRepositorio.findById(id);
 	}
 	
 	record CategoriaInput(String descricao) {
